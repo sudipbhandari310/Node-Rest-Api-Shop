@@ -12,6 +12,7 @@ mongoose.connect(
 app.use(morgan("dev")); // logs every thing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use("/uploads", express.static("uploads"));
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
